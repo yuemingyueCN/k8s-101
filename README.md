@@ -84,7 +84,8 @@ sudo kubeadm init
  --image-repository registry.aliyuncs.com/google_containers \
  --apiserver-advertise-address=192.168.34.2 \
  --pod-network-cidr=10.10.0.0/16
- 
+
+kubeadm init  --image-repository registry.aliyuncs.com/google_containers  --apiserver-advertise-address=172.30.219.96  --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all
  
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
